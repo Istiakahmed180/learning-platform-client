@@ -17,6 +17,24 @@ const LogIn = () => {
     form.reset();
   };
 
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
   const handleSignInEmailAndPassword = (email, password) => {
     signInEmailAndPassword(email, password)
       .then((result) => {
@@ -43,6 +61,7 @@ const LogIn = () => {
       </p>
       <div className="my-6 space-y-4">
         <button
+          onClick={handleGoogleSignIn}
           aria-label="Login with Google"
           type="button"
           className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-red-400"
@@ -57,6 +76,7 @@ const LogIn = () => {
           <p>Login with Google</p>
         </button>
         <button
+          onClick={handleGithubSignIn}
           aria-label="Login with GitHub"
           role="button"
           className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-red-400"

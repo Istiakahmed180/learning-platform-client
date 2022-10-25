@@ -4,8 +4,10 @@ import {
   getAuth,
   GithubAuthProvider,
   GoogleAuthProvider,
+  sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
 import app from "../Firevase/Firebase.init";
 import { createContext } from "react";
@@ -35,6 +37,14 @@ const ContextProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const updateNameAndPhoto = (profile) => {
+    return updateProfile(auth.currentUser, profile);
+  };
+
+  const emailVerify = () => {
+    return sendEmailVerification(auth.currentUser);
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -42,6 +52,8 @@ const ContextProvider = ({ children }) => {
         githubSignIn,
         createEmainAndPasswordSignIn,
         signInEmailAndPassword,
+        updateNameAndPhoto,
+        emailVerify,
       }}
     >
       {children}

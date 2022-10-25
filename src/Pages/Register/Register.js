@@ -4,8 +4,13 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 const Register = () => {
-  const { googleSignIn, githubSignIn, createEmainAndPasswordSignIn } =
-    useContext(AuthContext);
+  const {
+    googleSignIn,
+    githubSignIn,
+    createEmainAndPasswordSignIn,
+    updateNameAndPhoto,
+    emailVerify,
+  } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,8 +19,10 @@ const Register = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+    const photoURL = form.photoURL.value;
 
-    handleEmailAndPasswordSignIn(email, password);
+    handleEmailAndPasswordSignIn(email, password, name, photoURL);
+
     form.reset();
   };
 
@@ -37,14 +44,35 @@ const Register = () => {
       .catch((error) => console.error(error));
   };
 
-  const handleEmailAndPasswordSignIn = (email, password) => {
+  const handleEmailAndPasswordSignIn = (email, password, name, photoURL) => {
     createEmainAndPasswordSignIn(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        updateProfile(name, photoURL);
+        handleEmailVerify();
       })
       .catch((error) => console.error(error));
   };
+
+  const updateProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+    updateNameAndPhoto(profile)
+      .then(() => {
+        console.log("Profile Name Updated");
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleEmailVerify = () => {
+    emailVerify()
+      .then(() => console.log("Send Email Verification Code"))
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto mt-10">
@@ -65,6 +93,18 @@ const Register = () => {
               name="name"
               id="name"
               placeholder="Fullname"
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+            />
+          </div>
+          <div className="space-y-1 text-sm">
+            <label htmlFor="photoURL" className="block text-gray-400">
+              Photo URL
+            </label>
+            <input
+              type="text"
+              name="photoURL"
+              id="photoURL"
+              placeholder="Photo URL"
               className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
             />
           </div>
