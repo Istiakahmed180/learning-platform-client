@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 const Register = () => {
-  const { googleSignIn, githubSignIn } = useContext(AuthContext);
+  const { googleSignIn, githubSignIn, createEmainAndPasswordSignIn } =
+    useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +15,8 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(name, email, password);
+    handleEmailAndPasswordSignIn(email, password);
+    form.reset();
   };
 
   const handleGoogleSignIn = () => {
@@ -28,6 +30,15 @@ const Register = () => {
 
   const handleGithubSignIn = () => {
     githubSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleEmailAndPasswordSignIn = (email, password) => {
+    createEmainAndPasswordSignIn(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);

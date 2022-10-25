@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 const LogIn = () => {
+  const { googleSignIn, githubSignIn, signInEmailAndPassword } =
+    useContext(AuthContext);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+  };
+
   return (
     <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-900 text-gray-100 mx-auto">
       <h2 className="mb-3 text-3xl font-semibold text-center">
@@ -52,47 +64,41 @@ const LogIn = () => {
         <p className="px-3 text-gray-400">OR</p>
         <hr className="w-full text-gray-400" />
       </div>
-      <form action="" className="space-y-8 ng-untouched ng-pristine ng-valid">
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm">
-              Email address
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Istiakahmed@gmail.com"
-              className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
-              data-temp-mail-org="2"
-            />
-          </div>
-          <div className="space-y-2">
-            <div className="flex justify-between">
-              <label htmlFor="password" className="text-sm">
-                Password
-              </label>
-              <Link
-                rel="noopener noreferrer"
-                to="#"
-                className="text-xs hover:underline text-gray-400"
-              >
-                Forgot password?
-              </Link>
-            </div>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="*****"
-              className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
-            />
+      <form
+        onSubmit={handleSubmit}
+        action=""
+        className="space-y-6 ng-untouched ng-pristine ng-valid"
+      >
+        <div className="space-y-1 text-sm">
+          <label htmlFor="email" className="block text-gray-400">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+          />
+        </div>
+        <div className="space-y-1 text-sm">
+          <label htmlFor="password" className="block text-gray-400">
+            Password
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+          />
+          <div className="flex justify-end text-xs text-gray-400">
+            <Link rel="noopener noreferrer" to="#">
+              Forgot Password?
+            </Link>
           </div>
         </div>
-        <button
-          type="button"
-          className="w-full px-8 py-3 font-semibold rounded-md bg-red-400 text-gray-900"
-        >
+        <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-red-400">
           Log In
         </button>
       </form>
