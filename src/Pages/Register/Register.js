@@ -8,13 +8,13 @@ const Register = () => {
         <h1 className="text-2xl font-bold text-center">
           Register to your account
         </h1>
-        <form
+        <htmlForm
           novalidate=""
           action=""
           className="space-y-6 ng-untouched ng-pristine ng-valid"
         >
           <div className="space-y-1 text-sm">
-            <label for="fullname" className="block text-gray-400">
+            <label htmlFor="fullname" className="block text-gray-400">
               Fullname
             </label>
             <input
@@ -26,7 +26,7 @@ const Register = () => {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label for="email" className="block text-gray-400">
+            <label htmlFor="email" className="block text-gray-400">
               Email
             </label>
             <input
@@ -38,7 +38,7 @@ const Register = () => {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label for="password" className="block text-gray-400">
+            <label htmlFor="password" className="block text-gray-400">
               Password
             </label>
             <input
@@ -50,14 +50,14 @@ const Register = () => {
             />
             <div className="flex justify-end text-xs text-gray-400">
               <Link rel="noopener noreferrer" to="#">
-                Forgot Password?
+                htmlForgot Password?
               </Link>
             </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-red-400">
             Register
           </button>
-        </form>
+        </htmlForm>
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
           <p className="px-3 text-sm text-gray-400">
