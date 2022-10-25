@@ -21,7 +21,7 @@ const Header = () => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
-                to="/"
+                to="/home"
                 aria-label="Our product"
                 title="Our product"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -46,7 +46,7 @@ const Header = () => {
                 title="Product pricing"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Pages
+                FAQ
               </Link>
             </li>
             <li>
@@ -64,22 +64,12 @@ const Header = () => {
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <Link
-              to="/"
-              aria-label="Sign in"
-              title="Sign in"
+              to="/login"
+              aria-label="Log In"
+              title="Log In"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Sign in
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/"
-              className="bg-[#6420FF] inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Sign up
+              Log In
             </Link>
           </li>
         </ul>
@@ -142,7 +132,7 @@ const Header = () => {
                   <ul className="space-y-4">
                     <li>
                       <Link
-                        to="/"
+                        to="/home"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -167,7 +157,7 @@ const Header = () => {
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Pages
+                        FAQ
                       </Link>
                     </li>
                     <li>
@@ -182,22 +172,12 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="/"
-                        aria-label="Sign in"
-                        title="Sign in"
+                        to="/login"
+                        aria-label="Log In"
+                        title="Log In"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Sign in
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/"
-                        className="bg-[#6420FF] inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
-                      >
-                        Sign up
+                        Log In
                       </Link>
                     </li>
                   </ul>
