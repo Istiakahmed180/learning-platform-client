@@ -4,6 +4,7 @@ import {
   getAuth,
   GithubAuthProvider,
   GoogleAuthProvider,
+  onAuthStateChanged,
   sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -11,6 +12,8 @@ import {
 } from "firebase/auth";
 import app from "../Firevase/Firebase.init";
 import { createContext } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const auth = getAuth(app);
 
@@ -21,6 +24,8 @@ const githubProvider = new GithubAuthProvider();
 export const AuthContext = createContext();
 
 const ContextProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+
   const googleSignIn = () => {
     return signInWithPopup(auth, googleProvider);
   };
@@ -45,6 +50,16 @@ const ContextProvider = ({ children }) => {
     return sendEmailVerification(auth.currentUser);
   };
 
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
+      setUser(currentUser);
+    });
+    return () => {
+      unSubscribe();
+    };
+  }, []);
+
   return (
     <AuthContext.Provider
       value={{
@@ -54,6 +69,7 @@ const ContextProvider = ({ children }) => {
         signInEmailAndPassword,
         updateNameAndPhoto,
         emailVerify,
+        user,
       }}
     >
       {children}
