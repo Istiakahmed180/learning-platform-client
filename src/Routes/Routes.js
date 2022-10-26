@@ -4,7 +4,9 @@ import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 import Courses from "../Pages/Courses/Courses";
 import HeroSection from "../Pages/HeroSection/HeroSection";
 import LogIn from "../Pages/LogIn/LogIn";
+import PremiumCourses from "../Pages/PremiumCourses/PremiumCourses";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
         path: "/course-details",
         loader: () => fetch("http://localhost:5000/courses"),
         element: <CourseDetails></CourseDetails>,
+      },
+      {
+        path: "/premium-courses",
+        element: (
+          <PrivateRoute>
+            <PremiumCourses></PremiumCourses>
+          </PrivateRoute>
+        ),
       },
     ],
   },

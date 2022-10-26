@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen, user] = useState(false);
-  console.log(user);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { user, signOutUser } = useContext(AuthContext);
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
@@ -63,16 +66,36 @@ const Header = () => {
           </ul>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
-          <li>
-            <Link
-              to="/login"
-              aria-label="Log In"
-              title="Log In"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Log In
-            </Link>
-          </li>
+          {user?.uid ? (
+            <>
+              <img
+                alt=""
+                className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700"
+                src={user.photoURL}
+              />
+              <li>
+                <Link
+                  onClick={signOutUser}
+                  aria-label="Log Out"
+                  title="Log Out"
+                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                >
+                  Log Out
+                </Link>
+              </li>
+            </>
+          ) : (
+            <li>
+              <Link
+                to="/login"
+                aria-label="Log In"
+                title="Log In"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              >
+                Log In
+              </Link>
+            </li>
+          )}
         </ul>
         <div className="lg:hidden">
           <button
@@ -171,16 +194,36 @@ const Header = () => {
                         Blog
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/login"
-                        aria-label="Log In"
-                        title="Log In"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Log In
-                      </Link>
-                    </li>
+                    {user?.uid ? (
+                      <>
+                        <img
+                          alt=""
+                          className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700"
+                          src={user.photoURL}
+                        />
+                        <li>
+                          <Link
+                            onClick={signOutUser}
+                            aria-label="Log Out"
+                            title="Log Out"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Log Out
+                          </Link>
+                        </li>
+                      </>
+                    ) : (
+                      <li>
+                        <Link
+                          to="/login"
+                          aria-label="Log In"
+                          title="Log In"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          Log In
+                        </Link>
+                      </li>
+                    )}
                   </ul>
                 </nav>
               </div>

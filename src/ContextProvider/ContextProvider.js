@@ -8,6 +8,7 @@ import {
   sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 import app from "../Firevase/Firebase.init";
@@ -50,6 +51,10 @@ const ContextProvider = ({ children }) => {
     return sendEmailVerification(auth.currentUser);
   };
 
+  const signOutUser = () => {
+    return signOut(auth);
+  };
+
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
@@ -70,6 +75,7 @@ const ContextProvider = ({ children }) => {
         updateNameAndPhoto,
         emailVerify,
         user,
+        signOutUser,
       }}
     >
       {children}

@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
@@ -31,20 +31,15 @@ const CourseDetails = () => {
               <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
                 {details}
               </p>
-              <a
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+              <button
+                type="button"
+                className="bg-[#F3F4F6] relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900"
               >
-                Learn more
-                <svg
-                  className="inline-block w-3 ml-2"
-                  fill="currentColor"
-                  viewBox="0 0 12 12"
-                >
-                  <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                </svg>
-              </a>
+                <Link to={"/premium-courses"}>Get Premium Access</Link>
+                <span className="bg-[#F87171] absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-red-400">
+                  New
+                </span>
+              </button>
             </div>
           </div>
         </div>

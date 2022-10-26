@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 const LogIn = () => {
   const { googleSignIn, githubSignIn, signInEmailAndPassword } =
     useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,6 +42,7 @@ const LogIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate("/courses");
       })
       .catch((error) => console.error(error));
   };
