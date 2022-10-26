@@ -26,20 +26,25 @@ export const AuthContext = createContext();
 
 const ContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const googleSignIn = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
   const githubSignIn = () => {
+    setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
 
   const createEmainAndPasswordSignIn = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signInEmailAndPassword = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -52,6 +57,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const signOutUser = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
@@ -59,6 +65,7 @@ const ContextProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unSubscribe();
@@ -76,6 +83,7 @@ const ContextProvider = ({ children }) => {
         emailVerify,
         user,
         signOutUser,
+        loading,
       }}
     >
       {children}
