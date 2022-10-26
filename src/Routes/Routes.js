@@ -54,6 +54,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/premium-courses",
+        loader: () => fetch("http://localhost:5000/courses"),
+        element: (
+          <PrivateRoute>
+            <PremiumCourses></PremiumCourses>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/premium-courses/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/premium-courses/${params.id}`),
         element: (
           <PrivateRoute>
             <PremiumCourses></PremiumCourses>
