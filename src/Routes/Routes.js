@@ -31,30 +31,37 @@ const router = createBrowserRouter([
       },
       {
         path: "/courses",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://assignment-project-fake-server.vercel.app/courses"),
         element: <Courses></Courses>,
       },
       {
         path: "/category/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(
+            `https://assignment-project-fake-server.vercel.app/category/${params.id}`
+          ),
         element: <Courses></Courses>,
       },
       {
         path: "/course-details/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course-details/${params.id}`),
+          fetch(
+            `https://assignment-project-fake-server.vercel.app/course-details/${params.id}`
+          ),
         element: <CourseDetails></CourseDetails>,
       },
 
       {
         path: "/course-details",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://assignment-project-fake-server.vercel.app/courses"),
         element: <CourseDetails></CourseDetails>,
       },
       {
         path: "/premium-courses",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://assignment-project-fake-server.vercel.app/courses"),
         element: (
           <PrivateRoute>
             <PremiumCourses></PremiumCourses>
@@ -64,7 +71,9 @@ const router = createBrowserRouter([
       {
         path: "/premium-courses/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/premium-courses/${params.id}`),
+          fetch(
+            `https://assignment-project-fake-server.vercel.app/premium-courses/${params.id}`
+          ),
         element: (
           <PrivateRoute>
             <PremiumCourses></PremiumCourses>
