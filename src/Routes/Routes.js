@@ -3,6 +3,7 @@ import MainRoute from "../MainRoute/MainRoute";
 import Blog from "../Pages/Blog/Blog";
 import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 import Courses from "../Pages/Courses/Courses";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import HeroSection from "../Pages/HeroSection/HeroSection";
 import LogIn from "../Pages/LogIn/LogIn";
 import PremiumCourses from "../Pages/PremiumCourses/PremiumCourses";
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainRoute></MainRoute>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

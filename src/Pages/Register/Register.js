@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
 const Register = () => {
+  const [error, setError] = useState("");
+
   const {
     googleSignIn,
     githubSignIn,
@@ -31,8 +34,9 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError("");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => setError(error.message));
   };
 
   const handleGithubSignIn = () => {
@@ -40,8 +44,9 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError("");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => setError(error.message));
   };
 
   const handleEmailAndPasswordSignIn = (email, password, name, photoURL) => {
@@ -51,8 +56,9 @@ const Register = () => {
         console.log(user);
         updateProfile(name, photoURL);
         handleEmailVerify();
+        setError("");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => setError(error.message));
   };
 
   const updateProfile = (name, photoURL) => {
@@ -63,22 +69,27 @@ const Register = () => {
     updateNameAndPhoto(profile)
       .then(() => {
         console.log("Profile Name Updated");
+        setError("");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => setError(error.message));
   };
 
   const handleEmailVerify = () => {
     emailVerify()
-      .then(() => console.log("Send Email Verification Code"))
-      .catch((error) => console.error(error));
+      .then(() => {
+        console.log("Send Email Verification Code");
+        setError("");
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
-    <div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto mt-10">
+    <div className="bg-[#111827]">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto ">
         <h1 className="text-2xl font-bold text-center">
           Register to your account
         </h1>
+        <p className="text-red-500 text-xs italic text-center">{error}</p>
         <form
           onSubmit={handleSubmit}
           action=""
@@ -93,7 +104,7 @@ const Register = () => {
               name="name"
               id="name"
               placeholder="Fullname"
-              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 rounded-md border-gray-700 border bg-gray-900 text-gray-100 focus:border-red-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -105,7 +116,7 @@ const Register = () => {
               name="photoURL"
               id="photoURL"
               placeholder="Photo URL"
-              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -117,9 +128,10 @@ const Register = () => {
               name="email"
               id="email"
               placeholder="Email"
-              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
             />
           </div>
+
           <div className="space-y-1 text-sm">
             <label htmlFor="password" className="block text-gray-400">
               Password
@@ -129,7 +141,7 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
             />
             <div className="flex justify-end text-xs text-gray-400">
               <Link rel="noopener noreferrer" to="#">
