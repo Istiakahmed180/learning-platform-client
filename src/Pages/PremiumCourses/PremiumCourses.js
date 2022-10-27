@@ -16,8 +16,8 @@ const PremiumCourses = () => {
           </h2>
         </div>
         <div className="flex flex-wrap items-stretch -mx-4">
-          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-            <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-900">
+          <div className="flex w-full mb-8 sm:px-4  lg:w-1/3 lg:mb-0 ">
+            <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-gray-900 lg:mx-0 mx-auto">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Beginner</h4>
                 <span className="text-6xl font-bold text-[#F3F4F6]">
@@ -83,7 +83,7 @@ const PremiumCourses = () => {
             </div>
           </div>
           <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-            <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-red-400 text-gray-900">
+            <div className="flex flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-red-400 text-gray-900 lg:mx-0 mx-auto">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Pro</h4>
                 <span className="text-6xl font-bold text-[#F3F4F6]">
@@ -163,7 +163,7 @@ const PremiumCourses = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+          <div className="w-full mb-8 -4 md:w-1/2 lg:w-1/3 lg:mb-0">
             <div className="p-6 space-y-6 rounded shadow sm:p-8 bg-gray-900">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Team</h4>

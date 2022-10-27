@@ -58,7 +58,7 @@ const LogIn = () => {
   };
 
   return (
-    <div className="bg-[#111827]">
+    <div className="bg-[#111827] h-screen">
       <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-900 text-gray-100 mx-auto">
         <h2 className="mb-3 text-3xl font-semibold text-center">
           Login to your account

@@ -84,7 +84,7 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-[#111827]">
+    <div className="bg-[#111827] h-screen">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto ">
         <h1 className="text-2xl font-bold text-center">
           Register to your account

@@ -68,40 +68,57 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <ul className="flex items-center hidden space-x-8 lg:flex">
-          {user?.uid ? (
-            <>
-              <Tippy content={user.displayName}>
-                <img
-                  alt=""
-                  className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700"
-                  src={user.photoURL}
-                />
-              </Tippy>
+        <div>
+          <ul className="flex items-center hidden space-x-8 lg:flex">
+            {user?.uid ? (
+              <>
+                <Tippy content={user.displayName}>
+                  <img
+                    alt=""
+                    className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700"
+                    src={user.photoURL}
+                  />
+                </Tippy>
+                <li>
+                  <Link
+                    onClick={signOutUser}
+                    aria-label="Log Out"
+                    title="Log Out"
+                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  >
+                    Log Out
+                  </Link>
+                </li>
+              </>
+            ) : (
               <li>
                 <Link
-                  onClick={signOutUser}
-                  aria-label="Log Out"
-                  title="Log Out"
+                  to="/login"
+                  aria-label="Log In"
+                  title="Log In"
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                  Log Out
+                  Log In
                 </Link>
               </li>
-            </>
-          ) : (
-            <li>
-              <Link
-                to="/login"
-                aria-label="Log In"
-                title="Log In"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                Log In
-              </Link>
-            </li>
-          )}
-        </ul>
+            )}
+          </ul>
+        </div>
+        <div>
+          <label
+            for="Toggle1"
+            className="inline-flex items-center space-x-4 cursor-pointer text-gray-400"
+          >
+            <span>Light</span>
+            <span className="relative">
+              <input id="Toggle1" type="checkbox" className="hidden peer" />
+              <div className="w-10 h-6 rounded-full shadow-inner bg-gray-100 peer-checked:bg-gray-500"></div>
+              <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto bg-gray-300"></div>
+            </span>
+            <span>Dark</span>
+          </label>
+        </div>
+
         <div className="lg:hidden">
           <button
             aria-label="Open Menu"
