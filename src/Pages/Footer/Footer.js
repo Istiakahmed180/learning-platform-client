@@ -4,16 +4,6 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="relative mt-16 bg-deep-purple-accent-400">
-      <svg
-        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
-        preserveAspectRatio="none"
-        viewBox="0 0 1440 54"
-      >
-        <path
-          fill="currentColor"
-          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-        />
-      </svg>
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
@@ -24,11 +14,11 @@ const Footer = () => {
               className="inline-flex items-center"
             >
               <i className="ri-pantone-line text-2xl text-[#20A990]"></i>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-500 uppercase">
+              <span className="ml-2 text-xl font-bold tracking-wide  dark:text-gray-100 uppercase">
                 COURSERA
               </span>
             </Link>
-            <div className="mt-4 lg:max-w-sm">
+            <div className="mt-4 lg:max-w-sm dark:text-gray-300">
               <p className="text-sm text-deep-purple-50">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam.
@@ -41,14 +31,14 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
             <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
+              <p className="font-semibold tracking-wide text-teal-accent-400 dark:text-gray-100">
                 Category
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
                     to="/home"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Home
                   </Link>
@@ -56,7 +46,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     About US
                   </Link>
@@ -64,7 +54,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/courses"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Courses
                   </Link>
@@ -72,7 +62,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/blog"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Blog
                   </Link>
@@ -80,14 +70,14 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <p className="font-semibold tracking-wide text-teal-accent-400">
+              <p className="font-semibold tracking-wide text-teal-accent-400 dark:text-gray-100">
                 Information
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Privacy Policy
                   </Link>
@@ -95,7 +85,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Membership
                   </Link>
@@ -103,7 +93,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Purchases Guide
                   </Link>
@@ -111,7 +101,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Terms Of Service
                   </Link>
@@ -120,14 +110,14 @@ const Footer = () => {
             </div>
 
             <div className="ms-auto">
-              <p className="font-semibold tracking-wide text-teal-accent-400">
+              <p className="font-semibold tracking-wide text-teal-accent-400 dark:text-gray-100">
                 Get In Touch
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Address: Pabna,Bangladesh
                   </Link>
@@ -135,7 +125,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Phone:+08801734604086
                   </Link>
@@ -143,7 +133,7 @@ const Footer = () => {
                 <li>
                   <Link
                     to="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
+                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400 dark:text-gray-400"
                   >
                     Email:Istiakahmed180@gmail.com
                   </Link>
@@ -153,13 +143,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-          <p className="text-sm text-gray-500 text-center">
+          <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
             © Copyright 2020 Lorem Inc. All rights reserved.
           </p>
           <div className="flex items-center mt-4 space-x-4 sm:mt-0 mx-auto lg:mx-0">
             <Link
               to="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-[#18C2A3]"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                 <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
@@ -167,7 +157,7 @@ const Footer = () => {
             </Link>
             <Link
               to="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-[#18C2A3]"
             >
               <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
                 <circle cx="15" cy="15" r="4" />
@@ -176,7 +166,7 @@ const Footer = () => {
             </Link>
             <Link
               to="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
+              className="transition-colors duration-300 text-deep-purple-100 hover:text-[#18C2A3]"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
                 <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />

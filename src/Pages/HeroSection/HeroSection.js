@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../../Assests/Image/hero-img1.png";
+import Image from "../../Assests/Image/hero-img1-removebg-preview.png";
 import Company from "../Company/Company";
 
 const HeroSection = () => {
@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div>
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-20 ">
         <div className="mx-auto">
-          <h2 className="font-semibold text-center lg:text-start text-3xl leading-snug mb-6">
+          <h2 className="font-semibold text-center lg:text-start text-3xl leading-snug mb-6 dark:text-gray-300">
             Computer Science: <br /> Programming with a Purpose
           </h2>
           <p className="text-[#AAA6AA]">
@@ -49,7 +49,7 @@ const HeroSection = () => {
               />
               <button
                 type="submit"
-                className="text-white absolute right-2.5 bottom-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white absolute right-2.5 bottom-1 bg-[#19C2A2] hover:bg-[#0d7965] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1 dark:bg-[#19C2A2] dark:hover:bg-[#0d7965] dark:focus:ring-blue-800"
               >
                 Search
               </button>
