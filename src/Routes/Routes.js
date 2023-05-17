@@ -9,6 +9,7 @@ import LogIn from "../Pages/LogIn/LogIn";
 import PremiumCourses from "../Pages/PremiumCourses/PremiumCourses";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import BuyThePackage from "../Pages/BuyThePackage/BuyThePackage";
 
 const router = createBrowserRouter([
   {
@@ -66,24 +67,18 @@ const router = createBrowserRouter([
         element: <CourseDetails></CourseDetails>,
       },
       {
-        path: "/premium-courses",
-        loader: () =>
-          fetch("https://assignment-project-fake-server.vercel.app/courses"),
-        element: (
-          <PrivateRoute>
-            <PremiumCourses></PremiumCourses>
-          </PrivateRoute>
-        ),
-      },
-      {
         path: "/premium-courses/:id",
         loader: ({ params }) =>
           fetch(
             `https://assignment-project-fake-server.vercel.app/premium-courses/${params.id}`
           ),
+        element: <PremiumCourses></PremiumCourses>,
+      },
+      {
+        path: "/buy-the-package",
         element: (
           <PrivateRoute>
-            <PremiumCourses></PremiumCourses>
+            <BuyThePackage></BuyThePackage>
           </PrivateRoute>
         ),
       },
