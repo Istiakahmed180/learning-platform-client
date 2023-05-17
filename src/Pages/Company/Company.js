@@ -18,11 +18,6 @@ const Company = () => {
                 className="object-cover w-full h-52 dark:bg-gray-500 rounded-t-lg"
                 src="https://media.istockphoto.com/photos/online-education-concept-picture-id636332456?k=20&m=636332456&s=612x612&w=0&h=ckwh8_U-ET3QSyJUAaceejX6WGdljVy-E87PWO-Sok8="
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="px-4 py-1 text-sm bg-gray-800 text-white rounded-full">
-                  New
-                </span>
-              </div>
             </div>
             <div className="flex flex-col flex-1 p-6">
               <span className="text-xs tracking-wider uppercase text-[#16BA97]  font-semibold">

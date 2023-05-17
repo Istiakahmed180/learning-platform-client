@@ -27,7 +27,7 @@ const Header = () => {
   }, [theme]);
 
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:w-full md:px-24 lg:px-8 shadow-2xl rounded-b-xl shadow-[#18C1A2]">
       <div className="relative flex items-center justify-between">
         <div className="flex items-center">
           <Link
@@ -47,17 +47,18 @@ const Header = () => {
                 to="/home"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
               >
                 Home
               </Link>
             </li>
+
             <li>
               <Link
                 to="/courses"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-gray-300 dark:hover:text-gray-100"
+                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
               >
                 Courses
               </Link>
@@ -67,7 +68,7 @@ const Header = () => {
                 to="/"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-gray-300 dark:hover:text-gray-100"
+                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
               >
                 FAQ
               </Link>
@@ -77,7 +78,7 @@ const Header = () => {
                 to="/blog"
                 aria-label="About us"
                 title="About us"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-gray-300 dark:hover:text-gray-100"
+                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
               >
                 Blog
               </Link>
@@ -86,7 +87,7 @@ const Header = () => {
         </div>
         <div className="flex justify-center items-center">
           <button
-            className={`flex items-center justify-center mr-5 w-10 h-10  hover:bg-gray-200 hover:dark:bg-gray-700 rounded-full focus:outline-none ${
+            className={`flex items-center justify-center mr-5 w-10 h-10 duration-300 hover:bg-[#98e0d3] hover:dark:bg-gray-700 rounded-full focus:outline-none ${
               theme ? "shadow-md" : ""
             }`}
             onClick={() => setTheme((prevMode) => !prevMode)}
@@ -115,7 +116,7 @@ const Header = () => {
                     onClick={signOutUser}
                     aria-label="Log Out"
                     title="Log Out"
-                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-gray-300 dark:hover:text-gray-100"
+                    className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
                   >
                     Log Out
                   </Link>
@@ -127,7 +128,7 @@ const Header = () => {
                   to="/login"
                   aria-label="Log In"
                   title="Log In"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-gray-300 dark:hover:text-gray-100"
+                  className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
                 >
                   Log In
                 </Link>
