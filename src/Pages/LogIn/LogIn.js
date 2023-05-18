@@ -58,12 +58,12 @@ const LogIn = () => {
   };
 
   return (
-    <div className="bg-[#111827] h-screen">
-      <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-900 text-gray-100 mx-auto">
-        <h2 className="mb-3 text-3xl font-semibold text-center">
+    <div className=" my-16  h-screen">
+      <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-900  text-gray-100 mx-auto">
+        <h2 className="mb-3 text-3xl font-semibold text-center text-gray-900 dark:text-white">
           Login to your account
         </h2>
-        <p className="text-sm text-center text-gray-400">
+        <p className="text-sm text-center text-gray-500">
           Dont have account?
           <Link
             to="/register"
@@ -78,7 +78,7 @@ const LogIn = () => {
             onClick={handleGoogleSignIn}
             aria-label="Login with Google"
             type="button"
-            className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-red-400"
+            className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 text-gray-900 dark:text-white border-gray-400 focus:ring-red-400"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ const LogIn = () => {
             onClick={handleGithubSignIn}
             aria-label="Login with GitHub"
             type="button"
-            className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-red-400"
+            className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-gray-400 focus:ring-red-400 text-gray-900 dark:text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,9 +106,9 @@ const LogIn = () => {
           </button>
         </div>
         <div className="flex items-center w-full my-4">
-          <hr className="w-full text-gray-400" />
-          <p className="px-3 text-gray-400">OR</p>
-          <hr className="w-full text-gray-400" />
+          <hr className="w-full text-gray-500" />
+          <p className="px-3 text-gray-500">OR</p>
+          <hr className="w-full text-gray-500" />
         </div>
         <p className="text-red-500 text-xs italic text-center">{error}</p>
         <form
@@ -125,7 +125,7 @@ const LogIn = () => {
               name="email"
               id="email"
               placeholder="Email"
-              className="w-full px-4 py-3 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 border rounded-md border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:border-red-400"
             />
           </div>
 
@@ -138,7 +138,7 @@ const LogIn = () => {
               name="password"
               id="password"
               placeholder="Password"
-              className="w-full px-4 py-3 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 border rounded-md border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:border-red-400"
             />
             <div className="flex justify-end text-xs text-gray-400">
               <Link rel="noopener noreferrer" to="#">
@@ -146,7 +146,7 @@ const LogIn = () => {
               </Link>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-red-400">
+          <button className="block w-full p-3 text-center rounded-lg font-semibold  text-white bg-[#18C1A2] ">
             Log In
           </button>
         </form>

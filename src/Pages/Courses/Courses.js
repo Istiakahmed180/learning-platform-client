@@ -16,7 +16,7 @@ const Courses = () => {
 
   return (
     <section className="my-16">
-      <div class=" flex  ">
+      <div className=" flex ">
         <SideNav categories={categories}></SideNav>
         <div className="w-full">
           <Category CourseData={CourseData} key={CourseData._id}></Category>

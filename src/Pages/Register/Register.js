@@ -84,9 +84,9 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-[#111827] h-screen">
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 mx-auto ">
-        <h1 className="text-2xl font-bold text-center">
+    <div className="my-16 mb-32 h-screen">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 text-gray-100 mx-auto ">
+        <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white">
           Register to your account
         </h1>
         <p className="text-red-500 text-xs italic text-center">{error}</p>
@@ -104,7 +104,7 @@ const Register = () => {
               name="name"
               id="name"
               placeholder="Fullname"
-              className="w-full px-4 py-3 rounded-md border-gray-700 border bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 rounded-md border-gray-700 border dark:bg-gray-900 dark:text-gray-100 text-black focus:border-red-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -116,7 +116,7 @@ const Register = () => {
               name="photoURL"
               id="photoURL"
               placeholder="Photo URL"
-              className="w-full px-4 py-3 border rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 border rounded-md border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:border-red-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -128,7 +128,7 @@ const Register = () => {
               name="email"
               id="email"
               placeholder="Email"
-              className="w-full px-4 py-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 rounded-md border border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:border-red-400"
             />
           </div>
 
@@ -141,15 +141,15 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md border border-gray-700 bg-gray-900 text-gray-100 focus:border-red-400"
+              className="w-full px-4 py-3 rounded-md border border-gray-700 dark:bg-gray-900 dark:text-gray-100 text-black focus:border-red-400"
             />
-            <div className="flex justify-end text-xs text-gray-400">
+            <div className="flex justify-end text-xs text-gray-900 dark:text-gray-300">
               <Link rel="noopener noreferrer" to="#">
                 Forgot Password?
               </Link>
             </div>
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-red-400">
+          <button className="block w-full p-3 text-center rounded-lg font-semibold text-white bg-[#19C2A3]">
             Register
           </button>
         </form>
@@ -188,12 +188,12 @@ const Register = () => {
             </svg>
           </button>
         </div>
-        <p className="text-xs text-center sm:px-6 text-gray-400">
+        <p className="text-xs text-center sm:px-6 dark:text-gray-300 text-gray-900">
           Already have an account?
           <Link
             rel="noopener noreferrer"
             to="/login"
-            className="underline text-gray-100"
+            className="underline text-gray-900 dark:text-gray-300"
           >
             Log In
           </Link>

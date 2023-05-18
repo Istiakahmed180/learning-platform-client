@@ -3,44 +3,75 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
-  const { image_url, title, details, _id } = courseDetails;
+  const { image_url, title, details, _id, rating, price } = courseDetails;
   return (
-    <div className="relative">
-      <img
-        src={image_url}
-        className="absolute inset-0 object-cover w-full h-full brightness-50 "
-        alt=""
-      />
-      <div className="relative bg-opacity-75 bg-deep-purple-accent-700">
-        <svg
-          className="absolute inset-x-0 bottom-0 text-white"
-          viewBox="0 0 1160 163"
-        >
-          <path
-            fill="currentColor"
-            d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
-          />
-        </svg>
-        <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-center justify-between xl:flex-row">
-            <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-                {title}
-              </h2>
-              <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-                {details}
+    <div>
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="mx-auto sm:text-center lg:max-w-2xl">
+          <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div>
+              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 dark:text-gray-400 uppercase rounded-full bg-teal-accent-400">
+                Badge: {rating.badge}
               </p>
-              <button
-                type="button"
-                className="bg-[#F3F4F6] relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded dark:bg-gray-100 dark:text-gray-900"
-              >
-                <Link to={`/premium-courses/${_id}`}>Get Premium Access</Link>
-                <span className="bg-[#F87171] absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-red-400">
-                  New
-                </span>
-              </button>
             </div>
+            <h2 className=" mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl md:mx-auto">
+              <span className="relative inline-block">
+                <svg
+                  viewBox="0 0 52 24"
+                  fill="currentColor"
+                  className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                >
+                  <defs>
+                    <pattern
+                      id="5dc90b42-5ed4-45a6-8e63-2d78ca9d3d95"
+                      x="0"
+                      y="0"
+                      width=".135"
+                      height=".30"
+                    >
+                      <circle cx="1" cy="1" r=".7" />
+                    </pattern>
+                  </defs>
+                  <rect
+                    fill="url(#5dc90b42-5ed4-45a6-8e63-2d78ca9d3d95)"
+                    width="52"
+                    height="24"
+                  />
+                </svg>
+              </span>{" "}
+              {title}
+            </h2>
+            <p className="text-base text-gray-700 md:text-lg">
+              <span className="text-2xl font-semibold underline text-[#18C1A2]">
+                Available Packages
+              </span>
+              <div className="flex text-[#9adbd1] items-center mt-4 text-2xl font-semibold justify-between">
+                <span>{price.Beginner}</span> | <span>Pro</span> |
+                <span>Team</span>
+              </div>
+            </p>
           </div>
+          <div className="mb-4 transition-shadow duration-300 hover:shadow-xl lg:mb-6">
+            <img
+              className="object-cover w-full h-56 rounded shadow-lg sm:h-64 md:h-80 lg:h-96"
+              src={image_url}
+              alt=""
+            />
+          </div>
+          <p className="max-w-xl mb-4 text-justify mx-auto text-gray-700 dark:text-gray-300">
+            {details}
+          </p>
+          <Link to={`/premium-courses/${_id}`}>
+            <button
+              type="button"
+              className="relative px-6 py-2 ml-4 overflow-hidden font-semibold rounded dark:bg-gray-100 bg-[#18C1A2] dark:text-gray-900 text-gray-100"
+            >
+              Get Premium Access
+              <span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-violet-400 bg-orange-400">
+                New
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

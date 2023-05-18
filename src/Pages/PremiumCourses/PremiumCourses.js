@@ -165,7 +165,7 @@ const PremiumCourses = () => {
               </Link>
             </div>
           </div>
-          <div className=" mb-8 -4 md:w-1/2 lg:w-[29%] lg:mb-0">
+          <div className=" mb-8 lg:ml-0 ml-[67px] md:w-1/2 lg:w-[29%] lg:mb-0">
             <div className="p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 bg-[#69ac7f]">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Team</h4>
