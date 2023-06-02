@@ -27,7 +27,7 @@ const LearningResources = () => {
   ];
 
   return (
-    <div className="bg-teal-100 dark:bg-gray-900 py-8 mt-32 mx-8 rounded-lg">
+    <div className="bg-teal-50 dark:bg-gray-900 py-8 mt-32 mx-8 rounded-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl text-green-700 font-semibold tracking-wide uppercase mb-6">
           Learning Resources

@@ -36,7 +36,7 @@ const Header = () => {
             title="Company"
             className="inline-flex items-center mr-8"
           >
-            <i className="ri-pantone-line text-2xl text-[#20A990]"></i>
+            <i className="ri-pantone-line text-2xl text-teal-500"></i>
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 dark:text-gray-100 uppercase">
               Coursera
             </span>
@@ -47,7 +47,7 @@ const Header = () => {
                 to="/home"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400 hidden lg:block"
+                className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300 hidden lg:block"
               >
                 Home
               </Link>
@@ -58,7 +58,7 @@ const Header = () => {
                 to="/courses"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400 hidden lg:block"
+                className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300 hidden lg:block"
               >
                 Courses
               </Link>
@@ -68,7 +68,7 @@ const Header = () => {
                 to="/"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400 hidden lg:block"
+                className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300 hidden lg:block"
               >
                 FAQ
               </Link>
@@ -78,7 +78,7 @@ const Header = () => {
                 to="/blog"
                 aria-label="About us"
                 title="About us"
-                className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400 hidden lg:block"
+                className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300 hidden lg:block"
               >
                 Blog
               </Link>
@@ -116,7 +116,7 @@ const Header = () => {
                     onClick={signOutUser}
                     aria-label="Log Out"
                     title="Log Out"
-                    className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
+                    className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300"
                   >
                     Log Out
                   </Link>
@@ -128,7 +128,7 @@ const Header = () => {
                   to="/login"
                   aria-label="Log In"
                   title="Log In"
-                  className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
+                  className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300"
                 >
                   Log In
                 </Link>
@@ -170,7 +170,7 @@ const Header = () => {
                       title="Company"
                       className="inline-flex items-center"
                     >
-                      <i className="ri-pantone-line text-2xl text-[#20A990]"></i>
+                      <i className="ri-pantone-line text-2xl text-teal-500"></i>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase dark:text-white">
                         Coursera
                       </span>
@@ -199,7 +199,7 @@ const Header = () => {
                         to="/home"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
+                        className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300"
                       >
                         Home
                       </Link>
@@ -209,7 +209,7 @@ const Header = () => {
                         to="/courses"
                         aria-label="Our product"
                         title="Our product"
-                        className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400 "
+                        className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300 "
                       >
                         Courses
                       </Link>
@@ -219,7 +219,7 @@ const Header = () => {
                         to="/"
                         aria-label="Product pricing"
                         title="Product pricing"
-                        className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400 "
+                        className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300 "
                       >
                         FAQ
                       </Link>
@@ -229,7 +229,7 @@ const Header = () => {
                         to="/blog"
                         aria-label="About us"
                         title="About us"
-                        className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
+                        className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300"
                       >
                         Blog
                       </Link>
@@ -248,7 +248,7 @@ const Header = () => {
                             onClick={signOutUser}
                             aria-label="Log Out"
                             title="Log Out"
-                            className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
+                            className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300"
                           >
                             Log Out
                           </Link>
@@ -260,7 +260,7 @@ const Header = () => {
                           to="/login"
                           aria-label="Log In"
                           title="Log In"
-                          className="font-medium hover:underline hover:text-[#19C2A3] hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-gray-300 dark:hover:text-gray-100 hover:text-deep-purple-accent-400"
+                          className="font-medium hover:underline hover:text-teal-600 hover:transition-colors duration-300 tracking-wide text-gray-700 dark:text-teal-300 dark:text-teal-300 dark:text-teal-300"
                         >
                           Log In
                         </Link>

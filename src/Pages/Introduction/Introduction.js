@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Introduction = () => {
   return (
     <div>
-      <section className="bg-[#20A9A2] dark:bg-gray-800 py-12 px-4 sm:px-6 lg:px-8 container mx-auto rounded mt-32">
+      <section className="bg-teal-500 dark:bg-teal-700 py-12 px-4 sm:px-6 lg:px-8 container mx-auto rounded mt-32">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl leading-10 font-extrabold text-white dark:text-gray-200 sm:text-5xl sm:leading-none md:text-5xl">
             Welcome to our Learning Platform
@@ -16,7 +16,7 @@ const Introduction = () => {
           <div className="mt-10 flex justify-center">
             <Link
               to="/courses"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 dark:text-blue-400 bg-white dark:bg-gray-700 hover:text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-800 focus:outline-none focus:shadow-outline-blue active:bg-blue-200 dark:active:bg-blue-900 transition ease-in-out duration-150"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-teal-500 dark:text-teal-400 bg-white dark:bg-gray-700 hover:text-teal-600 hover:bg-teal-100 dark:hover:bg-teal-800 focus:outline-none focus:shadow-outline-teal active:bg-teal-200 dark:active:bg-teal-900 transition ease-in-out duration-150"
             >
               Explore Courses
             </Link>

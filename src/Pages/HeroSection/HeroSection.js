@@ -9,7 +9,7 @@ const HeroSection = () => {
           <h2 className="font-semibold text-center lg:text-start text-3xl leading-snug mb-6 dark:text-gray-300">
             Computer Science: <br /> Programming with a Purpose
           </h2>
-          <p className="text-[#AAA6AA]">
+          <p className="text-teal-500">
             The basic for education <br /> in the last millennium was “reading,
             writing, and arithmetic <br /> now it is reading, writing, and
             computing
@@ -25,7 +25,7 @@ const HeroSection = () => {
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
-                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  className="w-5 h-5 text-teal-500 dark:text-gray-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -42,13 +42,13 @@ const HeroSection = () => {
               <input
                 type="search"
                 id="default-search"
-                className="mx-auto block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="mx-auto block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-500 focus:border-teal-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500"
                 placeholder="Search "
                 required
               />
               <button
                 type="submit"
-                className="text-white absolute right-2.5 bottom-1 bg-[#19C2A2] hover:bg-[#0d7965] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1 dark:bg-[#19C2A2] dark:hover:bg-[#0d7965] dark:focus:ring-blue-800"
+                className="text-white absolute right-2.5 bottom-1 bg-teal-500 hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-3 py-1 dark:bg-teal-500 dark:hover:bg-teal-600 dark:focus:ring-teal-800"
               >
                 Search
               </button>
