@@ -4,6 +4,7 @@ import Introduction from "../Introduction/Introduction";
 import Company from "../Company/Company";
 import PopulerCourses from "../PopulerCourses/PopulerCourses";
 import Testimonials from "../Testimonials/Testimonials";
+import InstructorProfiles from "../InstructorProfiles/InstructorProfiles";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Company></Company>
       <PopulerCourses></PopulerCourses>
       <Testimonials></Testimonials>
+      <InstructorProfiles></InstructorProfiles>
     </div>
   );
 };

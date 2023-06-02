@@ -39,7 +39,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="py-8 mt-32 mx-8 rounded-lg bg-[#b9ebe2] dark:bg-gray-900">
+    <div className="py-8 mt-32 mx-8 rounded-lg bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-2xl text-[#14B99B] font-semibold tracking-wide uppercase">
@@ -63,7 +63,7 @@ const Testimonials = () => {
                 <Fade bottom>
                   <div className="testimonial-item">
                     <div className="testimonial-content">
-                      <p className="text-lg leading-7 text-gray-700 dark:text-gray-300">
+                      <p className="text-lg leading-7 text-gray-700 dark:text-gray-300 text-center">
                         {testimonial.message}
                       </p>
                     </div>
@@ -75,7 +75,7 @@ const Testimonials = () => {
                           className="rounded-full h-16 w-16 object-cover mx-auto"
                         />
                       </div>
-                      <div className="testimonial-details">
+                      <div className="testimonial-details text-center pb-10">
                         <div className="testimonial-name text-gray-900 dark:text-gray-100">
                           {testimonial.name}
                         </div>
