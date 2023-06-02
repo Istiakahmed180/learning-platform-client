@@ -27,7 +27,7 @@ const Header = () => {
   }, [theme]);
 
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:w-full md:px-24 lg:px-8 shadow-2xl rounded-b-xl shadow-[#18C1A2]">
+    <div className="px-4  py-5 mx-auto sm:max-w-xl md:max-w-full lg:w-full md:px-24 lg:px-8 shadow-2xl rounded-b-xl shadow-[#18C1A2]">
       <div className="relative flex items-center justify-between">
         <div className="flex items-center">
           <Link
@@ -108,7 +108,7 @@ const Header = () => {
                   <img
                     alt=""
                     className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700"
-                    src={user?.photoURL}
+                    src={user?.photoURL && user.photoURL}
                   />
                 </Tippy>
                 <li>

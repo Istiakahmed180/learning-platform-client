@@ -2,8 +2,8 @@ import React from "react";
 
 const Company = () => {
   return (
-    <section className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-300">
-      <div className="container p-6 mx-auto space-y-8">
+    <section className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-300 mt-32">
+      <div className=" p-6 mx-auto space-y-8">
         <div className="space-y-2 text-center">
           <h2 className="text-3xl font-bold">Anytime Anywhere</h2>
           <p className="font-serif text-sm dark:dark:text-gray-400">

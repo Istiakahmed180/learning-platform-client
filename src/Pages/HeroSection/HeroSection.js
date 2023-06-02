@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "../../Assests/Image/hero-img1-removebg-preview.png";
-import Company from "../Company/Company";
 
 const HeroSection = () => {
   return (
     <div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-20 ">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-32">
         <div className="mx-auto">
           <h2 className="font-semibold text-center lg:text-start text-3xl leading-snug mb-6 dark:text-gray-300">
             Computer Science: <br /> Programming with a Purpose
@@ -60,7 +59,6 @@ const HeroSection = () => {
           <img className="w-full" src={Image} alt="" />
         </div>
       </div>
-      <Company></Company>
     </div>
   );
 };

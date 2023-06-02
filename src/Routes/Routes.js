@@ -4,12 +4,12 @@ import Blog from "../Pages/Blog/Blog";
 import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 import Courses from "../Pages/Courses/Courses";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import HeroSection from "../Pages/HeroSection/HeroSection";
 import LogIn from "../Pages/LogIn/LogIn";
 import PremiumCourses from "../Pages/PremiumCourses/PremiumCourses";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import BuyThePackage from "../Pages/BuyThePackage/BuyThePackage";
+import Home from "../Pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -19,11 +19,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HeroSection></HeroSection>,
+        element: <Home></Home>,
       },
       {
         path: "/home",
-        element: <HeroSection></HeroSection>,
+        element: <Home></Home>,
       },
       {
         path: "/register",
