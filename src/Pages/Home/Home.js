@@ -5,6 +5,7 @@ import Company from "../Company/Company";
 import PopulerCourses from "../PopulerCourses/PopulerCourses";
 import Testimonials from "../Testimonials/Testimonials";
 import InstructorProfiles from "../InstructorProfiles/InstructorProfiles";
+import LearningResources from "../LearningResources/LearningResources";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <PopulerCourses></PopulerCourses>
       <Testimonials></Testimonials>
       <InstructorProfiles></InstructorProfiles>
+      <LearningResources></LearningResources>
     </div>
   );
 };
